@@ -243,6 +243,107 @@ details textarea{margin-top:8px;font-size:.85rem}
 @keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.28)}100%{transform:scale(1)}}
 @keyframes bump{40%{transform:scale(1.05)}}
 @keyframes glow{0%,100%{color:var(--muted)}50%{color:var(--red)}}
+
+/* ===== Eventos ===== */
+.ev{position:relative;margin-top:44px;background:radial-gradient(900px 400px at 85% -10%,rgba(232,177,58,.18),transparent 60%),linear-gradient(180deg,#0f4a2b,#0b3a21);color:#fff;overflow:hidden;padding-bottom:40px}
+.ev .cane{opacity:.95}
+.ev a{color:inherit}
+.ev-hero{display:grid;gap:22px;padding-top:30px;align-items:center}
+.ev-kick{display:inline-block;background:var(--gold);color:#3a2a00;font-weight:800;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;border-radius:999px;padding:5px 12px}
+.ev h2.ev-h{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.02em;font-size:clamp(2.6rem,10vw,4.6rem);line-height:.98;margin:10px 0 8px;display:block;color:#fff}
+.ev h2.ev-h::after{display:none}
+.ev-h em{font-style:normal;color:var(--gold)}
+.ev-lead{margin:0;font-size:1.08rem;color:#e6f3ea;max-width:34ch}
+.ev-badges{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 18px;padding:0;list-style:none}
+.ev-badges li{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:7px 14px;font-weight:700;font-size:.9rem}
+.ev-cta{display:flex;flex-wrap:wrap;gap:12px}
+.ev-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:14px;padding:14px 22px;font-weight:800;font-size:1.02rem;text-decoration:none;cursor:pointer;color:#fff;background:linear-gradient(#ea2a44,#b3122a);box-shadow:0 5px 0 #7a0b1b,0 10px 18px rgba(0,0,0,.3);transition:transform .12s,box-shadow .12s,filter .12s}
+.ev-btn:active{transform:translateY(3px);box-shadow:0 2px 0 #7a0b1b}
+.ev-btn.g{background:linear-gradient(#34e07b,#1da851);box-shadow:0 5px 0 #127a38,0 10px 18px rgba(0,0,0,.3)}
+.ev-btn.g:active{box-shadow:0 2px 0 #127a38}
+.ev-btn.o{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7);box-shadow:none}
+.ev-flyer{justify-self:center;position:relative;border:0;padding:0;background:none;width:min(300px,78vw);transform:rotate(2.5deg);transition:transform .3s;cursor:zoom-in}
+.ev-flyer img{display:block;width:100%;height:auto;border-radius:14px;border:6px solid #fff;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.ev-flyer::after{content:"Ver folleto";position:absolute;right:-6px;bottom:14px;background:var(--red);color:#fff;font-weight:800;font-size:.8rem;border-radius:999px;padding:6px 12px;box-shadow:0 4px 10px rgba(0,0,0,.35)}
+.ev-flyer:hover{transform:rotate(0) scale(1.03)}
+.ev-mq{margin-top:28px;overflow:hidden;border-block:2px dashed rgba(255,255,255,.3);padding-block:12px;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.ev-mq div{display:flex;gap:34px;width:max-content;font-family:var(--festive);font-weight:700;font-size:1.7rem;white-space:nowrap}
+.ev-mq span::before{content:"\2605";color:var(--gold);margin-right:34px;font-family:var(--body);font-size:1rem;vertical-align:middle}
+.ev-blk{margin-top:42px}
+.ev-t{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.04em;font-size:1.9rem;margin:0 0 4px;color:#fff}
+.ev-s{margin:0 0 16px;color:#cfe5d6}
+.ev-fl{display:flex;gap:8px;overflow-x:auto;padding-bottom:12px;scrollbar-width:none}
+.ev-fl::-webkit-scrollbar{display:none}
+.ev-fl button{flex:none;border:2px solid rgba(255,255,255,.35);background:transparent;color:#fff;border-radius:999px;padding:8px 16px;font-weight:800;font-size:.9rem;cursor:pointer;transition:background .2s,color .2s}
+.ev-fl button[aria-pressed="true"]{background:#fff;color:var(--green-deep);border-color:#fff}
+.ev-gal{position:relative}
+.ev-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 2px 18px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.ev-track::-webkit-scrollbar{display:none}
+.ev-card{flex:none;scroll-snap-align:start;width:min(72vw,270px);aspect-ratio:4/5;border:0;padding:0;border-radius:18px;overflow:hidden;position:relative;background:#0b3a21;cursor:zoom-in;box-shadow:0 10px 24px rgba(0,0,0,.35);transition:transform .25s,box-shadow .25s}
+.ev-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.ev-card b{position:absolute;left:0;right:0;bottom:0;padding:34px 14px 12px;text-align:left;font-size:.98rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.75))}
+.ev-card:hover{transform:translateY(-4px) rotate(-.6deg)}
+.ev-card:hover img{transform:scale(1.06)}
+.ev-arr{display:none;position:absolute;top:42%;width:46px;height:46px;border-radius:50%;border:0;background:#fff;color:var(--green-deep);font-size:1.5rem;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.4);cursor:pointer;z-index:2}
+.ev-arr.l{left:-8px}.ev-arr.r{right:-8px}
+@media (hover:hover) and (min-width:760px){.ev-arr{display:grid;place-items:center}}
+.ev-steps{display:grid;gap:14px;counter-reset:st;padding:0;margin:0;list-style:none}
+.ev-steps li{position:relative;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:18px 18px 18px 72px;counter-increment:st}
+.ev-steps li::before{content:counter(st);position:absolute;left:16px;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;background:var(--gold);color:#3a2a00;font-family:var(--display);font-size:1.4rem;display:grid;place-items:center;box-shadow:0 3px 0 #a87c16}
+.ev-steps b{display:block;font-size:1.05rem}
+.ev-steps span{color:#cfe5d6;font-size:.95rem}
+.ev-feat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ev-feat div{background:#fff;color:var(--ink);border-radius:16px;padding:16px 14px;text-align:center;box-shadow:0 6px 16px rgba(0,0,0,.22)}
+.ev-feat svg{width:38px;height:38px;color:var(--red);margin-bottom:6px}
+.ev-feat b{display:block;font-size:.98rem;line-height:1.2}
+.ev-feat span{display:block;color:var(--muted);font-size:.85rem;margin-top:4px}
+.ev-form{background:#fff;color:var(--ink);border-radius:22px;padding:20px 18px;display:grid;gap:14px;box-shadow:0 16px 40px rgba(0,0,0,.4);border-top:8px solid var(--red)}
+.ev-form h3{margin:0;font-family:var(--display);font-weight:400;font-size:1.7rem;text-transform:uppercase;letter-spacing:.03em;color:var(--green)}
+.ev-form label.l{display:block;font-weight:800;font-size:.9rem;margin-bottom:6px}
+.ev-form .opts{display:flex;flex-wrap:wrap;gap:8px}
+.ev-form .g2{display:grid;gap:12px}
+.ev-form .field{width:100%}
+.ev-form textarea.field{min-height:76px;resize:vertical;font-family:inherit}
+.ev-gst{display:flex;align-items:center;gap:10px}
+.ev-gst .field{text-align:center;font-weight:800;font-size:1.1rem;max-width:110px}
+.ev-warn{margin:6px 0 0;font-size:.88rem;color:var(--muted)}
+.ev-warn.ok{color:var(--green);font-weight:700}
+.ev-form .send{display:flex;align-items:center;justify-content:center;gap:8px;text-align:center;text-decoration:none;color:#fff;border-radius:14px;padding:15px;font-weight:800;font-size:1.05rem}
+.ev-form .send[aria-disabled="true"]{background:var(--bg);color:var(--muted);border:1px dashed var(--line);box-shadow:none;pointer-events:none}
+.ev-prev{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px;font-size:.88rem;white-space:pre-wrap;color:var(--muted);max-height:180px;overflow:auto;margin:0;font-family:inherit}
+.ev-quote{text-align:center;font-family:var(--festive);font-weight:700;font-size:1.6rem;margin:34px 0 0;color:var(--gold)}
+.ev-lb{position:fixed;inset:0;z-index:90;background:rgba(5,25,14,.94);display:grid;grid-template-rows:auto 1fr auto;padding:max(10px,env(safe-area-inset-top)) 12px max(14px,env(safe-area-inset-bottom))}
+.ev-lb[hidden]{display:none}
+.ev-lb header{display:flex;justify-content:space-between;align-items:center;color:#fff;font-weight:800;padding:6px 2px}
+.ev-lb header button{border:2px solid rgba(255,255,255,.6);background:transparent;color:#fff;border-radius:999px;padding:8px 16px;font-weight:800;cursor:pointer}
+.ev-lb figure{margin:0;display:grid;place-items:center;min-height:0;position:relative;touch-action:pan-y}
+.ev-lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:12px}
+.ev-lb figcaption{position:absolute;bottom:6px;left:0;right:0;text-align:center;color:#fff;font-weight:800;text-shadow:0 2px 8px #000}
+.ev-lb .nv{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:var(--green-deep);font-size:1.6rem;font-weight:800;cursor:pointer;z-index:2}
+.ev-lb .nv.l{left:2px}.ev-lb .nv.r{right:2px}
+.ev-lb footer{display:flex;justify-content:center;padding-top:10px}
+@media (min-width:760px){
+  .ev-hero{grid-template-columns:1.2fr .8fr}
+  .ev-card{width:260px}
+  .ev-steps{grid-template-columns:repeat(3,1fr)}
+  .ev-steps li{padding:72px 18px 18px;text-align:center}
+  .ev-steps li::before{left:50%;top:18px;transform:translateX(-50%)}
+  .ev-feat{grid-template-columns:repeat(4,1fr)}
+  .ev-form{padding:28px}
+  .ev-form .g2{grid-template-columns:1fr 1fr}
+}
+@media (prefers-reduced-motion:no-preference){
+  .ev-mq div{animation:mq 28s linear infinite}
+  .ev-flyer{animation:flt 6s ease-in-out infinite}
+  .ev-kick{animation:pop .6s ease both}
+  .ev-card.in{animation:rise .6s ease both}
+  .ev-steps li,.ev-feat div,.ev-form{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+  .ev-steps li.in,.ev-feat div.in,.ev-form.in{opacity:1;transform:none}
+  .ev-btn:hover{filter:brightness(1.08);transform:translateY(-2px)}
+  .ev-lb:not([hidden]) img{animation:pop .35s ease}
+}
+@keyframes mq{to{transform:translateX(-50%)}}
+@keyframes flt{0%,100%{transform:rotate(2.5deg) translateY(0)}50%{transform:rotate(1deg) translateY(-8px)}}
 </style>
 </head>
 <body>
@@ -285,6 +386,84 @@ details textarea{margin-top:8px;font-size:.85rem}
 <nav class="nav" aria-label="Categorías del menú"><div class="wrap"><div class="chips" id="chips"></div></div></nav>
 
 <main class="wrap" id="menu"></main>
+
+
+<section class="ev" id="s-eventos" aria-labelledby="evH">
+  <div class="cane"></div>
+  <div class="wrap">
+    <div class="ev-hero">
+      <div>
+        <span class="ev-kick">Eventos</span>
+        <h2 class="ev-h" id="evH">¡Elotes para tu <em>evento!</em></h2>
+        <p class="ev-lead">Te acompañamos en tus momentos más importantes.</p>
+        <ul class="ev-badges"><li>Desde 30 personas</li><li>O por tipo de evento</li><li>Cotización sin compromiso</li></ul>
+        <div class="ev-cta">
+          <button type="button" class="ev-btn g" data-evgo="evForm">Cotizar mi evento</button>
+          <button type="button" class="ev-btn o" data-evgo="evGal">Ver fotos</button>
+        </div>
+      </div>
+      <button type="button" class="ev-flyer" id="evFlyer" aria-label="Ver folleto de eventos"><img src="eventos/flyer.jpg" alt="Folleto: Elotes para tu evento, paquetes desde 30 personas" loading="lazy"></button>
+    </div>
+  </div>
+  <div class="ev-mq" aria-hidden="true"><div id="evMq"></div></div>
+  <div class="wrap">
+    <div class="ev-blk" id="evGal">
+      <h3 class="ev-t">Así se ven nuestros eventos</h3>
+      <p class="ev-s">Toca una foto para verla en grande.</p>
+      <div class="ev-fl" id="evFl" role="group" aria-label="Filtrar fotos"></div>
+      <div class="ev-gal">
+        <button type="button" class="ev-arr l" id="evPrev" aria-label="Anterior">&#8249;</button>
+        <div class="ev-track" id="evTrack"></div>
+        <button type="button" class="ev-arr r" id="evNext" aria-label="Siguiente">&#8250;</button>
+      </div>
+    </div>
+    <div class="ev-blk">
+      <h3 class="ev-t">Así de fácil</h3>
+      <p class="ev-s">Sin compromiso, tú decides.</p>
+      <ol class="ev-steps">
+        <li><b>Cuéntanos de tu evento</b><span>Tipo de evento, fecha, lugar y cuántos invitados.</span></li>
+        <li><b>Te cotizamos</b><span>Te respondemos por WhatsApp con tu cotización sin compromiso.</span></li>
+        <li><b>Nosotros nos encargamos</b><span>Llevamos los elotes y esquites a tu evento.</span></li>
+      </ol>
+    </div>
+    <div class="ev-blk">
+      <h3 class="ev-t">Lo que llevamos</h3>
+      <div class="ev-feat">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="18" height="9" rx="1.5"/><path d="M7 9v9M12 9v9M17 9v9M3 13.5h18"/><path d="M8 5c0-1 1-1 1-2M13 5c0-1 1-1 1-2"/></svg><b>Barra de toppings</b><span>Todo para servirlo a tu gusto</span></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10l-1.2 15a2 2 0 0 1-2 1.8h-3.6a2 2 0 0 1-2-1.8z"/><path d="M8 9h8M12 4V2"/></svg><b>Elotes y esquites</b><span>Con el sabor de siempre</span></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15.5 14.4c3 0 5.5 2.4 5.5 5.6"/></svg><b>Desde 30 personas</b><span>O paquete por tipo de evento</span></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><b>Sin compromiso</b><span>Pide tu cotización</span></div>
+      </div>
+    </div>
+    <div class="ev-blk" id="evForm">
+      <form class="ev-form" id="evF" onsubmit="return false" novalidate>
+        <h3>Cotiza tu evento</h3>
+        <div><span class="l" style="display:block;font-weight:800;font-size:.9rem;margin-bottom:6px">¿Qué vas a celebrar?</span>
+          <div class="opts" id="evTipo"></div></div>
+        <div class="g2">
+          <div><label class="l" for="evFecha">Fecha</label><input class="field" id="evFecha" type="date"></div>
+          <div><label class="l" for="evHora">Hora aproximada</label><input class="field" id="evHora" type="time"></div>
+        </div>
+        <div><label class="l" for="evInv">Invitados (aprox.)</label>
+          <div class="ev-gst"><button type="button" class="step" id="evMin" aria-label="Menos invitados">&minus;</button><input class="field" id="evInv" type="number" inputmode="numeric" min="1" value="50"><button type="button" class="step" id="evPlus" aria-label="Más invitados">+</button></div>
+          <p class="ev-warn" id="evWarn"></p></div>
+        <div><label class="l" for="evLugar">Lugar (salón, colonia o ciudad)</label><input class="field" id="evLugar" type="text" autocomplete="off" placeholder="Ej. Salón, jardín, colonia"></div>
+        <div><label class="l" for="evNom">Tu nombre</label><input class="field" id="evNom" type="text" autocomplete="name"></div>
+        <div><label class="l" for="evNota">Algo más que quieras contarnos (opcional)</label><textarea class="field" id="evNota"></textarea></div>
+        <pre class="ev-prev" id="evPrev2" aria-live="polite"></pre>
+        <a class="send ev-btn g" id="evSend" href="#" target="_blank" rel="noopener" aria-disabled="true">Pedir cotización por WhatsApp</a>
+        <p class="fine" id="evFine" style="text-align:center">Elige el tipo de evento y escribe tu nombre.</p>
+      </form>
+    </div>
+    <p class="ev-quote">Sabor, tradición y amor en cada elote</p>
+  </div>
+</section>
+
+<div class="ev-lb" id="evLb" hidden role="dialog" aria-modal="true" aria-label="Fotos de eventos">
+  <header><span id="evCnt"></span><button type="button" id="evClose">Cerrar</button></header>
+  <figure id="evFig"><button type="button" class="nv l" id="evLp" aria-label="Anterior">&#8249;</button><img id="evImg" alt=""><figcaption id="evCap"></figcaption><button type="button" class="nv r" id="evLn" aria-label="Siguiente">&#8250;</button></figure>
+  <footer><button type="button" class="ev-btn g" id="evLq">Quiero algo así en mi evento</button></footer>
+</div>
 
 <section class="wrap" aria-labelledby="infoH">
   <div class="info">
@@ -676,6 +855,117 @@ details textarea{margin-top:8px;font-size:.85rem}
     },{threshold:.08});
     Array.prototype.forEach.call(document.querySelectorAll('.row'),function(r){r.classList.add('rv');rio.observe(r)});
   }
+
+
+  /* ===== Eventos ===== */
+  (function(){
+    var PH=[
+      ['xv','XV años','XV años'],['boda','Bodas','Bodas'],['cumple-ninos','Cumpleaños','Cumpleaños infantil'],
+      ['cumple','Cumpleaños','Cumpleaños'],['familia','Cumpleaños','Fiestas familiares'],['bautizo','Bautizos','Bautizos'],
+      ['baby','Bautizos','Baby shower'],['empresa','Empresas','Eventos de empresa'],['noche','Fiestas','Fiestas de noche'],
+      ['aire','Fiestas','Al aire libre'],['campo','Fiestas','Jardines y terrazas'],['luces','Fiestas','Barra con luces'],
+      ['esquites','Sabor','Esquites listos para servir'],['toppings','Sabor','Con tus toppings favoritos'],['elotes','Sabor','Elote entero']
+    ];
+    var FL=['Todos','XV años','Bodas','Cumpleaños','Bautizos','Empresas','Fiestas','Sabor'];
+    var TIPOS=['XV años','Boda','Cumpleaños','Bautizo','Baby shower','Empresa','Posada','Otro'];
+    var cur=PH.slice(),idx=0,WA='https://wa.me/524442140854';
+    var track=$('#evTrack'),fl=$('#evFl'),lb=$('#evLb');
+    var mq=[ 'XV años','Bodas','Cumpleaños','Bautizos','Baby shower','Posadas','Eventos de empresa','Reuniones familiares'];
+    $('#evMq').innerHTML=mq.concat(mq).map(function(t){return '<span>'+t+'</span>'}).join('');
+    function paint(f){
+      cur=PH.filter(function(x){return f==='Todos'||x[1]===f});
+      track.innerHTML=cur.map(function(x,i){
+        return '<button type="button" class="ev-card" data-i="'+i+'"><img src="eventos/'+x[0]+'.jpg" alt="'+x[2]+'" loading="lazy"><b>'+x[2]+'</b></button>';
+      }).join('');
+      track.scrollLeft=0;
+      if(!RM)Array.prototype.forEach.call(track.children,function(c,i){c.style.animationDelay=(i*60)+'ms';c.classList.add('in')});
+    }
+    fl.innerHTML=FL.map(function(f,i){return '<button type="button" aria-pressed="'+(i===0)+'" data-f="'+f+'">'+f+'</button>'}).join('');
+    fl.addEventListener('click',function(e){
+      var b=e.target.closest('button');if(!b)return;
+      Array.prototype.forEach.call(fl.children,function(x){x.setAttribute('aria-pressed',x===b)});
+      paint(b.dataset.f);
+    });
+    paint('Todos');
+    function step(d){track.scrollBy({left:d*(track.firstChild?track.firstChild.offsetWidth+14:260)*2,behavior:RM?'auto':'smooth'})}
+    $('#evPrev').addEventListener('click',function(){step(-1)});
+    $('#evNext').addEventListener('click',function(){step(1)});
+    function show(i){
+      idx=(i+cur.length)%cur.length;var x=cur[idx];
+      $('#evImg').src='eventos/'+x[0]+'.jpg';$('#evImg').alt=x[2];$('#evCap').textContent=x[2];
+      $('#evCnt').textContent=(idx+1)+' / '+cur.length;
+    }
+    function openLb(i,single){
+      if(single){cur=[['flyer','Eventos','Folleto de eventos']]}
+      show(i);lb.hidden=false;document.body.style.overflow='hidden';
+      $('#evLp').hidden=$('#evLn').hidden=cur.length<2;
+      $('#evClose').focus();
+    }
+    function closeLb(){lb.hidden=true;document.body.style.overflow='';var a=$('.ev-fl [aria-pressed="true"]');paint(a?a.dataset.f:'Todos')}
+    track.addEventListener('click',function(e){var c=e.target.closest('.ev-card');if(c)openLb(+c.dataset.i)});
+    $('#evFlyer').addEventListener('click',function(){openLb(0,true)});
+    $('#evClose').addEventListener('click',closeLb);
+    $('#evLp').addEventListener('click',function(){show(idx-1)});
+    $('#evLn').addEventListener('click',function(){show(idx+1)});
+    lb.addEventListener('click',function(e){if(e.target===lb||e.target.id==='evFig')closeLb()});
+    document.addEventListener('keydown',function(e){
+      if(lb.hidden)return;
+      if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')show(idx-1);if(e.key==='ArrowRight')show(idx+1);
+    });
+    var tx=null;
+    $('#evFig').addEventListener('touchstart',function(e){tx=e.touches[0].clientX},{passive:true});
+    $('#evFig').addEventListener('touchend',function(e){
+      if(tx===null||cur.length<2)return;var d=e.changedTouches[0].clientX-tx;tx=null;
+      if(Math.abs(d)>50)show(idx+(d<0?1:-1));
+    });
+    $('#evLq').addEventListener('click',function(){closeLb();goTo('evForm')});
+    Array.prototype.forEach.call(document.querySelectorAll('[data-evgo]'),function(b){
+      b.addEventListener('click',function(){goTo(b.dataset.evgo)});
+    });
+    /* cotizador */
+    var tipo='';
+    $('#evTipo').innerHTML=TIPOS.map(function(t){return '<label><input type="radio" name="evt" value="'+t+'"><span>'+t+'</span></label>'}).join('');
+    var inv=$('#evInv'),fecha=$('#evFecha');
+    try{var d=new Date();fecha.min=d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)}catch(e){}
+    function fmtDate(v){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(v);return m?m[3]+'/'+m[2]+'/'+m[1]:''}
+    function ev(){
+      var n=parseInt(inv.value,10)||0,w=$('#evWarn');
+      if(n>=30){w.textContent='Paquetes desde 30 personas.';w.className='ev-warn ok'}
+      else{w.textContent='Nuestros paquetes son desde 30 personas. Escríbenos y revisamos tu caso.';w.className='ev-warn'}
+      var nm=$('#evNom').value.trim(),lg=$('#evLugar').value.trim(),nt=$('#evNota').value.trim(),hr=$('#evHora').value;
+      var L=['Hola, quiero cotizar un evento con Elotes y Esquites Unicorn','',
+        '*Nombre:* '+nm,'*Tipo de evento:* '+(tipo||'-')];
+      if(fecha.value)L.push('*Fecha:* '+fmtDate(fecha.value));
+      if(hr)L.push('*Hora:* '+hr);
+      if(n)L.push('*Invitados:* aprox. '+n);
+      if(lg)L.push('*Lugar:* '+lg);
+      if(nt)L.push('*Comentarios:* '+nt);
+      var m=L.join('\n'),ok=!!(tipo&&nm),a=$('#evSend');
+      $('#evPrev2').textContent=ok?m:'';$('#evPrev2').hidden=!ok;
+      a.setAttribute('aria-disabled',ok?'false':'true');
+      a.href=ok?WA+'?text='+encodeURIComponent(m):'#';
+      $('#evFine').textContent=ok?'Se abre WhatsApp con tu mensaje ya escrito. Te respondemos con tu cotización.':'Elige el tipo de evento y escribe tu nombre.';
+    }
+    $('#evF').addEventListener('input',function(e){
+      if(e.target.name==='evt')tipo=e.target.value;ev();
+    });
+    $('#evF').addEventListener('change',function(e){if(e.target.name==='evt'){tipo=e.target.value;ev()}});
+    $('#evMin').addEventListener('click',function(){inv.value=Math.max(1,(parseInt(inv.value,10)||0)-10);ev()});
+    $('#evPlus').addEventListener('click',function(){inv.value=(parseInt(inv.value,10)||0)+10;ev()});
+    $('#evSend').addEventListener('click',function(e){if(this.getAttribute('aria-disabled')==='true')e.preventDefault()});
+    ev();
+    if(!RM&&'IntersectionObserver' in window){
+      var eio=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');eio.unobserve(en.target)}})},{threshold:.12});
+      Array.prototype.forEach.call(document.querySelectorAll('.ev-steps li,.ev-feat div,.ev-form'),function(x){eio.observe(x)});
+    }
+    /* chip en la barra */
+    var b=document.createElement('button');b.type='button';b.className='chip';b.textContent='Eventos';b.dataset.target='s-eventos';
+    chips.appendChild(b);
+    if('IntersectionObserver' in window){
+      new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting)Array.prototype.forEach.call(chips.children,function(ch){
+        if(ch===b)ch.setAttribute('aria-current','true');else ch.removeAttribute('aria-current')})})},{rootMargin:'-90px 0px -65% 0px'}).observe($('#s-eventos'));
+    }
+  })();
 
   refresh();
 })();
