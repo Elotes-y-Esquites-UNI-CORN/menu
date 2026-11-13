@@ -432,7 +432,6 @@ details textarea{margin-top:8px;font-size:.85rem}
         <ul class="ev-badges"><li>Desde 30 personas</li><li>O por tipo de evento</li><li>Cotización sin compromiso</li></ul>
         <div class="ev-cta">
           <button type="button" class="ev-btn g" data-evgo="evForm">Cotizar mi evento</button>
-          <button type="button" class="ev-btn o" data-evgo="evGal">Ver fotos</button>
         </div>
       </div>
       <button type="button" class="ev-flyer" id="evFlyer" aria-label="Ver folleto de eventos"><img src="eventos/flyer.jpg" alt="Folleto: Elotes para tu evento, paquetes desde 30 personas" loading="lazy"></button>
@@ -440,16 +439,6 @@ details textarea{margin-top:8px;font-size:.85rem}
   </div>
   <div class="ev-mq" aria-hidden="true"><div id="evMq"></div></div>
   <div class="wrap">
-    <div class="ev-blk" id="evGal">
-      <h3 class="ev-t">Así se ven nuestros eventos</h3>
-      <p class="ev-s">Toca una foto para verla en grande.</p>
-      <div class="ev-fl" id="evFl" role="group" aria-label="Filtrar fotos"></div>
-      <div class="ev-gal">
-        <button type="button" class="ev-arr l" id="evPrev" aria-label="Anterior">&#8249;</button>
-        <div class="ev-track" id="evTrack"></div>
-        <button type="button" class="ev-arr r" id="evNext" aria-label="Siguiente">&#8250;</button>
-      </div>
-    </div>
     <div class="ev-blk">
       <h3 class="ev-t">Así de fácil</h3>
       <p class="ev-s">Sin compromiso, tú decides.</p>
@@ -893,51 +882,18 @@ details textarea{margin-top:8px;font-size:.85rem}
 
   /* ===== Eventos ===== */
   (function(){
-    var PH=[
-      ['xv','XV años','XV años'],['boda','Bodas','Bodas'],['cumple-ninos','Cumpleaños','Cumpleaños infantil'],
-      ['cumple','Cumpleaños','Cumpleaños'],['familia','Cumpleaños','Fiestas familiares'],['bautizo','Bautizos','Bautizos'],
-      ['baby','Bautizos','Baby shower'],['empresa','Empresas','Eventos de empresa'],['noche','Fiestas','Fiestas de noche'],
-      ['aire','Fiestas','Al aire libre'],['campo','Fiestas','Jardines y terrazas'],['luces','Fiestas','Barra con luces'],
-      ['esquites','Sabor','Esquites listos para servir'],['toppings','Sabor','Con tus toppings favoritos'],['elotes','Sabor','Elote entero']
-    ];
-    var FL=['Todos','XV años','Bodas','Cumpleaños','Bautizos','Empresas','Fiestas','Sabor'];
+    var cur=[['flyer','Eventos','Folleto de eventos']],idx=0,WA='https://wa.me/524442140854',lb=$('#evLb');
     var TIPOS=['XV años','Boda','Cumpleaños','Bautizo','Baby shower','Empresa','Posada','Otro'];
-    var cur=PH.slice(),idx=0,WA='https://wa.me/524442140854';
-    var track=$('#evTrack'),fl=$('#evFl'),lb=$('#evLb');
-    var mq=[ 'XV años','Bodas','Cumpleaños','Bautizos','Baby shower','Posadas','Eventos de empresa','Reuniones familiares'];
+    var mq=['XV años','Bodas','Cumpleaños','Bautizos','Baby shower','Posadas','Eventos de empresa','Reuniones familiares'];
     $('#evMq').innerHTML=mq.concat(mq).map(function(t){return '<span>'+t+'</span>'}).join('');
-    function paint(f){
-      cur=PH.filter(function(x){return f==='Todos'||x[1]===f});
-      track.innerHTML=cur.map(function(x,i){
-        return '<button type="button" class="ev-card" data-i="'+i+'"><img src="eventos/'+x[0]+'.jpg" alt="'+x[2]+'" loading="lazy"><b>'+x[2]+'</b></button>';
-      }).join('');
-      track.scrollLeft=0;
-      if(!RM)Array.prototype.forEach.call(track.children,function(c,i){c.style.animationDelay=(i*60)+'ms';c.classList.add('in')});
-    }
-    fl.innerHTML=FL.map(function(f,i){return '<button type="button" aria-pressed="'+(i===0)+'" data-f="'+f+'">'+f+'</button>'}).join('');
-    fl.addEventListener('click',function(e){
-      var b=e.target.closest('button');if(!b)return;
-      Array.prototype.forEach.call(fl.children,function(x){x.setAttribute('aria-pressed',x===b)});
-      paint(b.dataset.f);
-    });
-    paint('Todos');
-    function step(d){track.scrollBy({left:d*(track.firstChild?track.firstChild.offsetWidth+14:260)*2,behavior:RM?'auto':'smooth'})}
-    $('#evPrev').addEventListener('click',function(){step(-1)});
-    $('#evNext').addEventListener('click',function(){step(1)});
     function show(i){
       idx=(i+cur.length)%cur.length;var x=cur[idx];
       $('#evImg').src='eventos/'+x[0]+'.jpg';$('#evImg').alt=x[2];$('#evCap').textContent=x[2];
       $('#evCnt').textContent=(idx+1)+' / '+cur.length;
     }
-    function openLb(i,single){
-      if(single){cur=[['flyer','Eventos','Folleto de eventos']]}
-      show(i);lb.hidden=false;document.body.style.overflow='hidden';
-      $('#evLp').hidden=$('#evLn').hidden=cur.length<2;
-      $('#evClose').focus();
-    }
-    function closeLb(){lb.hidden=true;document.body.style.overflow='';var a=$('.ev-fl [aria-pressed="true"]');paint(a?a.dataset.f:'Todos')}
-    track.addEventListener('click',function(e){var c=e.target.closest('.ev-card');if(c)openLb(+c.dataset.i)});
-    $('#evFlyer').addEventListener('click',function(){openLb(0,true)});
+    function openLb(){show(0);lb.hidden=false;document.body.style.overflow='hidden';$('#evLp').hidden=$('#evLn').hidden=true;$('#evClose').focus()}
+    function closeLb(){lb.hidden=true;document.body.style.overflow=''}
+    $('#evFlyer').addEventListener('click',function(){openLb()});
     $('#evClose').addEventListener('click',closeLb);
     $('#evLp').addEventListener('click',function(){show(idx-1)});
     $('#evLn').addEventListener('click',function(){show(idx+1)});
